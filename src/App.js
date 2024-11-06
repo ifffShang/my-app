@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes, Link, useNavigate, useParams } 
 import UserProfile from './UserProfile';
 import UserActivities from './UserActivities';
 import './App.css';
+const basename = process.env.NODE_ENV === "production" ? "/my-app" : "";
+
 
 async function fetchUsers() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -74,8 +76,8 @@ function App() {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <Router>
-            <Routes>
+        <Router basename={basename}>
+            <Routes >
                 <Route path="/" element={<UserList users={users} />} />
                 <Route path="/users/:userId" element={<UserActivitiesPage activities={activities} />} />
                 <Route path="*" element={<p>Page not found</p>} />
