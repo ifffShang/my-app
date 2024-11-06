@@ -1,6 +1,8 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useNavigate, useParams } from 'react-router-dom';
+import {  Route, Routes, Link, useNavigate, useParams } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
+
 import UserProfile from './UserProfile';
 import UserActivities from './UserActivities';
 import './App.css';
@@ -76,13 +78,13 @@ function App() {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <Router basename={basename}>
-            <Routes >
-                <Route path="/" element={<UserList users={users} />} />
-                <Route path="/users/:userId" element={<UserActivitiesPage activities={activities} />} />
-                <Route path="*" element={<p>Page not found</p>} />
-            </Routes>
-        </Router>
+<Router>
+    <Routes>
+        <Route path="/" element={<UserList users={users} />} />
+        <Route path="/users/:userId" element={<UserActivitiesPage activities={activities} />} />
+        <Route path="*" element={<p>Page not found</p>} />
+    </Routes>
+</Router>
     );
 }
 
