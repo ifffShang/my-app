@@ -32,6 +32,7 @@ function UserData() {
         <div key={user.id}>
           <h3>{user.name}</h3>
           <p>Email: {user.email}</p>
+
           <p>Phone: {user.phone}</p>
 
           <h4>Posts:</h4>
