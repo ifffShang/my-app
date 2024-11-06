@@ -1,0 +1,47 @@
+/* src/App.css */
+
+.App {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    min-height: 100vh; /* Makes the App take full viewport height */
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centers each user item horizontally */
+}
+
+.user-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content inside each user item */
+    width: 100%; /* Ensure items don’t exceed the container width */
+    max-width: 500px; /* Optional max width for each item */
+    text-align: center; /* Centers text inside each item */
+}
+
+button {
+    padding: 8px 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

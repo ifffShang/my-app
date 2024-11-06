@@ -1,0 +1,15 @@
+/* src/UserData.css */
+
+.user-data {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.user-section {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

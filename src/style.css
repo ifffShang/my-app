@@ -1,0 +1,40 @@
+/* src/styles.css */
+
+.App {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.user-profile, .user-activities {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-profile h2 {
+    margin-top: 0;
+}
+
+.user-activities h3 {
+    margin-top: 0;
+}
+
+.user-activities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-activities li {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .App {
+        padding: 10px;
+    }
+
+    .user-profile, .user-activities {
+        padding: 15px;
+    }
+}
